@@ -1,0 +1,109 @@
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --card-bg: #fff;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #f4f4f4;
+    --card-bg: #2c2c2c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#taskList {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.task {
+    padding: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(244, 244, 244, 0.7);
+    z-index: -1;
+}
+
+body.dark::before {
+    background: rgba(30, 30, 30, 0.7);
+}

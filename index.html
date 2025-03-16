@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="themeToggle">Toggle Dark/Light</button>
+    <h1>Task Management Web Application</h1>
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Task Title" required>
+        <input type="text" id="description" placeholder="Task Description" required>
+        <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <input type="text" id="category" placeholder="Category" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search tasks..." onkeyup="applyFilters()">
+        <select id="categoryFilter" onchange="applyFilters()">
+            <option value="">All Categories</option>
+        </select>
+        <select id="prioritySort" onchange="applyFilters()">
+            <option value="none">Sort by Priority</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+        </select>
+    </div>
+
+    <div id="taskList"></div>
+    <script src="app.js"></script>
+</body>
+</html>
